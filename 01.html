@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<!-- One of many JavaScript HTML methods is getElementById().
+The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":
+ -->
+
+<button type="button"
+onclick= "document.getElementById('demo').innerHTML = demoFunction() ">
+demoFunction</button>
+
+<button type="buton" 
+onclick="document.getElementById('demo2').innerHTML = demo2Function()">
+demo2Function
+</button>
+
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo3").innerHTML = "Hello JavaScript!"'>demo3Function</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+
+function demoFunction(){
+    const options = {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2dhdGV3YXkuc3RhY2twYXRoLmNvbSIsImV4cCI6MTY0NDU0MTM4NSwiaWF0IjoxNjQ0NTM3Nzg1LCJpc3MiOiJpZGVudGl0eS5zdGFja3BhdGguY29tIiwic3ViIjoic3RhY2twYXRofGVjYzk3OGIwLThmMDYtNDMwZC1iOWMyLWViM2E3MzA1ZjJmOCIsImh0dHBzOi8vaWRlbnRpdHkuc3RhY2twYXRoLmNvbS9hY2NvdW50cyI6W3siaWQiOiJjOTVkZjE1Yy00NzBkLTQ3OTctYWVkZC00NTM4YzgyZDA2NWEifV0sImh0dHBzOi8vaWRlbnRpdHkuc3RhY2twYXRoLmNvbS9lbWFpbCI6ImFzaG9rLm5haWt1QHN0YWNrcGF0aC5jb20iLCJodHRwczovL2lkZW50aXR5LnN0YWNrcGF0aC5jb20vanRpIjoiZjg5YTQ2NjgtNjFhNi00NDExLTkxODktOWE4Nzg4OTRiY2U5In0.kQA_cI41b0g_R7dmuoIG8P5oCNjfn1j29nL-WATnmN8Wn_rEi2S8nQ476VnS2ysYIH_oy7BUDA7jd5iocsPkPKgIw6M0HECLl0USEFzOKEII1vTwJ3Io4uxuf95rfqodp2ntK4K8fOhCp_fEx_LA_ugwdCcG5Hf0FdrY_Qd26LzamYzKzd3dcbwpDRODmEQ8P-vqAPSe085R4lw8leTlO5NyfeWXvkC5aWJess8a5Yp7_1LbdTt8uTmX6Epgcvk773LlCRA-Zz20yMEqY2yenwy7nineKn-Vr6vs7M98FrdPMIQRoPrNMaYO7Oe3dZJ5sRISds8d-ZvERoVQwIBjlg'
+    }
+  };
+  
+  fetch('https://gateway.stackpath.com/identity/v1/accounts/c95df15c-470d-4797-aedd-4538c82d065a', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+
+    // return response.json();
+}
+
+</script>
+
+</body>
+</html> 
+
+
