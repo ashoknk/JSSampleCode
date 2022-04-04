@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Anonymous Functions</h2>
+<p>After a function has been stored in a variable,the variable can be used as a function:</p>
+<p>The function above is actually an <b>anonymous</b> function (a function without a name).
+<br>
+Functions stored in variables do not need function names. They are always invoked (called) using the variable name.
+</p>
+<p id="demo"></p>
+<script>
+const x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x(4, 3);
+</script>
+
+
+<br>
+
+<h2>JavaScript Self-Invoking Functions</h2>
+<p>Functions can be invoked automatically without being called:</p>
+<p id="demo2"></p>
+<script>
+(function () {
+  document.getElementById("demo2").innerHTML = "Hello! I called myself";
+})();
+</script>
+
+<br>
+
+<h2>JavaScript Arrow Functions</h2>
+<p>With arrow functions, you don't have to type the function keyword, the return keyword, and the curly brackets.</p>
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+<p id="demo3"></p>  
+<script>
+const x2 = (x, y) => x * y * 2;
+document.getElementById("demo3").innerHTML = x2(5, 6);
+</script>
+
+
+<p>Arrow functions do not have their own this. They are not well suited for defining object methods.</p>
+<p>Arrow functions are not hoisted. They must be defined before they are used.</p>
+<p>Using const is safer than using var, because a function expression is always constant value.</p>
+<p>You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
+
+<br>
+<h2>JavaScript Arrow Functions 2</h2>
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+<p id="demo4"></p>
+<script>
+const x4 = (x, y) => { return x * y * 10};
+document.getElementById("demo4").innerHTML = x4(5, 5);
+</script>
+
+</body>
+</html>
+
+

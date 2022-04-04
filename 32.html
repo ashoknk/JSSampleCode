@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript apply() Method</h2>
+<p>In this example the fulllName method of person is <b>applied</b> on person1:</p>
+<p id="demo"></p>
+<script>
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+document.getElementById("demo").innerHTML = person.fullName.apply(person1); 
+</script>
+
+
+
+
+<h2>JavaScript  apply() Method with Arguments</h2>
+<p>The <b>apply()</b> method accepts arguments in an array::</p>
+<p id="demo2"></p>
+<script>
+const personwithargs = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+document.getElementById("demo2").innerHTML = personwithargs.fullName.apply(person1, ["Oslo", "Norway"]); 
+</script>
+
+
+</body>
+</html>
+
+

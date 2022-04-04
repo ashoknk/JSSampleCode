@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Functions</h2>
+
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+
+<p>Arrow functions do not have their own <b>this</b>. They are not well suited for defining <b>object methods</b>.</p>
+
+<p>Arrow functions are <b>not hoisted</b>. They must be defined before they are used.</p>
+
+<p>Using <b>const</b> is safer than using var, because a function expression is always constant value.</p>
+
+<p>You can only omit the return keyword and the curly brackets if the function is a <b>single statement</b>. Because of this, it might be a good habit to always keep them:</p>
+
+<p id="demo"></p>
+
+<script>
+const x = (x, y) => { return x * y };
+document.getElementById("demo").innerHTML = x(5, 5);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript call() Method</h2>
+<p>This example calls the fullName method of person, using it on person1:
+<p>The call() method is a predefined JavaScript method.</p>
+<p>It can be used to invoke (call) a method with an owner object as an argument (parameter).</p>
+<p>With call(), an object can use a method belonging to another object.</p>
+</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+const person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
+
+const person3 = {
+  firstName:"Peter",
+  lastName: "Pan"
+}
+
+document.getElementById("demo").innerHTML = person.fullName.call(person1); 
+document.getElementById("demo2").innerHTML = person.fullName.call(person2); 
+document.getElementById("demo3").innerHTML = person.fullName.call(person3); 
+
+</script>
+
+<h2>The call() Method with Arguments</h2>
+
+<p>The call() method can accept arguments:</p>
+
+
+
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+const personwitharg = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+
+document.getElementById("demo4").innerHTML = personwitharg.fullName.call(person1, "Oslo", "Norway"); 
+document.getElementById("demo5").innerHTML = personwitharg.fullName.call(person2, "Tokyo", "Japan"); 
+</script>
+
+</body>
+</html>
+
+

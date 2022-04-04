@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions this keyword</h2>
+
+<p>In HTML the value of <b>this</b>, in a global function, is the window object.</p>
+<p id="demo"></p>
+<script>
+let x = myFunction();
+function myFunction() {
+  return this;
+}
+document.getElementById("demo").innerHTML = x; 
+</script>
+
+
+
+<h2>What is <b>this</b>?</h2>
+<p>In JavaScript, the <code class="w3-codespan">this</code> keyword refers to an <b>object</b>.</p>
+<p><b>Which</b> object depends on how <code class="w3-codespan">this</code> is being invoked (used or called).</p>
+<p>The <code class="w3-codespan">this</code> keyword refers to different objects depending on how it is used:</p>
+<table class="ws-table-all">
+<tr><td>In an object method, <code class="w3-codespan">this</code> refers to the <b>object</b>.</td></tr>
+<tr><td>Alone, <code class="w3-codespan">this</code> refers to the <b>global object</b>.</td></tr>
+<tr><td>In a function, <code class="w3-codespan">this</code> refers to the <b>global object</b>.</td></tr>
+<tr><td>In a function, in strict mode, <code class="w3-codespan">this</code> is <code class="w3-codespan">undefined</code>.</td></tr>
+<tr><td>In an event, <code class="w3-codespan">this</code> refers to the <b>element</b> that received the event.</td></tr>
+<tr><td>Methods like <code class="w3-codespan">call()</code>, <code class="w3-codespan">apply()</code>,
+and <code class="w3-codespan">bind()</code> can refer <code class="w3-codespan">this</code> to <b>any object</b>.</td></tr>
+</table>
+
+
+</body>
+</html>
+
+
+
+

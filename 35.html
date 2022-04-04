@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Function not using bind()</h1>
+<p>This example will try to display a person name after 3 seconds.</p>
+<p id="demo"></p>
+<script>
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function() {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+setTimeout(person.display, 3000);
+</script>
+
+
+<h1>JavaScript Function bind()</h1>
+<p>This example will display a person name after 3 seconds:</p>
+<p id="demo2"></p>
+<script>
+const person2 = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function() {
+    let x = document.getElementById("demo2");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+let display = person2.display.bind(person2);
+setTimeout(display, 3000);
+</script>
+
+
+</body>
+</html>

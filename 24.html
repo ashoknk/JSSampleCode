@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Callback</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+<br>
+In the example above, myFunction is used as a callback.
+<br>
+myFunction is passed to setTimeout() as an argument.
+<br>
+3000 is the number of milliseconds before time-out, so myFunction() will be called after 3 seconds.
+<br>
+<h1 id="demo"></h1>
+
+<script>
+setTimeout(myFunction, 3000);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I love You !!";
+}
+</script>
+
+</body>
+</html>
